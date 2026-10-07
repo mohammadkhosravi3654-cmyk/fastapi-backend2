@@ -15,3 +15,6 @@ gradle :app:assembleDebug
 
 
 Build pipeline activation.
+
+
+Build pipeline compatibility fix applied.
