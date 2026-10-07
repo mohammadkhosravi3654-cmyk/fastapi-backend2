@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Khosravi Assistant</string>
+    <string name="accessibility_description">Khosravi Assistant UI automation service</string>
+</resources>
