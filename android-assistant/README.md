@@ -22,3 +22,5 @@ Build pipeline compatibility fix applied.
 Rebuild trigger.
 
 APK workflow test 2.
+
+Direct Gradle build trigger.
