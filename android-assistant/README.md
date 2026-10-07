@@ -24,3 +24,5 @@ Rebuild trigger.
 APK workflow test 2.
 
 Direct Gradle build trigger.
+
+APK2 trigger.
