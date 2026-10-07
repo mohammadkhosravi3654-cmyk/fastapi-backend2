@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android-assistant
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -16,15 +19,9 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: gradle/actions/setup-gradle@v4
-      - name: Install compatible Gradle
-        run: |
-          wget -q https://services.gradle.org/distributions/gradle-9.5-bin.zip
-          unzip -q gradle-9.5-bin.zip -d "$RUNNER_TEMP"
       - name: Build debug APK
-        working-directory: android-assistant
-        run: "$RUNNER_TEMP/gradle-9.5/bin/gradle" :app:assembleDebug --no-daemon
+        run: gradle :app:assembleDebug --no-daemon
       - name: Verify APK
-        working-directory: android-assistant
         run: |
           test -s app/build/outputs/apk/debug/app-debug.apk
           unzip -t app/build/outputs/apk/debug/app-debug.apk
