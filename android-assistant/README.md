@@ -26,3 +26,5 @@ APK workflow test 2.
 Direct Gradle build trigger.
 
 APK2 trigger.
+
+AGP 9.0.1 build trigger.
