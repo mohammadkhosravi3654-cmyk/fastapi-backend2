@@ -12,3 +12,6 @@ Features:
 
 Build:
 gradle :app:assembleDebug
+
+
+Build pipeline activation.
