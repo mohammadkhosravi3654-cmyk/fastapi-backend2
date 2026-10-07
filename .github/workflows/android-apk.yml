@@ -16,12 +16,18 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: "9.5"
+      - name: Install Gradle 9.5
+        run: |
+          curl -fsSL https://services.gradle.org/distributions/gradle-9.5-bin.zip -o "$RUNNER_TEMP/gradle.zip"
+          unzip -q "$RUNNER_TEMP/gradle.zip" -d "$RUNNER_TEMP"
       - name: Build APK
         working-directory: android-assistant
-        run: gradle :app:assembleDebug --no-daemon
+        run: "$RUNNER_TEMP/gradle-9.5/bin/gradle" :app:assembleDebug --no-daemon
+      - name: Verify APK
+        working-directory: android-assistant
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          unzip -t app/build/outputs/apk/debug/app-debug.apk
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
