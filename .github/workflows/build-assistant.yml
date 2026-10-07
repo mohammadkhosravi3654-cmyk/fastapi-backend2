@@ -5,9 +5,12 @@ on:
   push:
     paths:
       - "android-assistant/**"
+  issues:
+    types: [opened]
 
 jobs:
   build:
+    if: github.event_name != 'issues' || contains(github.event.issue.title, '[BUILD-APK]')
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,6 +24,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - name: Build debug APK
         run: gradle :app:assembleDebug
+      - name: Verify APK
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          unzip -t app/build/outputs/apk/debug/app-debug.apk
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
