@@ -1,0 +1,23 @@
+{
+  "agent": "mohammad-twin",
+  "mode": "execution",
+  "owner": "Mohammad",
+  "last_cycle": null,
+  "workstreams": {
+    "revenue-services": {"status":"active","priority":1,"next_action":"Find and qualify current remote service demand."},
+    "deal-intelligence": {"status":"active","priority":1,"next_action":"Find verified high-value commission opportunities."},
+    "music": {"status":"active","priority":2,"next_action":"Find current buyers, licensing and distribution opportunities."},
+    "luxury-crafts": {"status":"active","priority":2,"next_action":"Find verified collectors, galleries and luxury buyers."},
+    "youtube": {"status":"planned","priority":3,"next_action":"Build monetizable content pipeline without violating platform rules."},
+    "instagram": {"status":"planned","priority":3,"next_action":"Build a separate growth and sales pipeline."},
+    "product-and-web": {"status":"active","priority":2,"next_action":"Improve the practical service storefront and execution layer."},
+    "automation-and-recovery": {"status":"active","priority":1,"next_action":"Monitor failures and recover with supported alternatives."}
+  },
+  "blocked_boundaries": [
+    "account ownership or OAuth approval",
+    "KYC or identity verification",
+    "payment-provider approval",
+    "bank authorization",
+    "contract or NDA signature"
+  ]
+}
