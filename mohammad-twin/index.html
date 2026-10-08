@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mohammad Twin — Execution Console</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:980px;margin:0 auto;padding:24px;background:#0d1117;color:#e6edf3}
+.card{border:1px solid #30363d;border-radius:14px;padding:16px;margin:12px 0;background:#161b22}
+.badge{display:inline-block;padding:4px 9px;border-radius:999px;background:#238636;color:white;font-size:12px}
+h1{margin-bottom:4px} small{color:#8b949e}
+</style>
+</head>
+<body>
+<h1>Mohammad Twin</h1>
+<small>Execution console — independent workstreams, state, next actions.</small>
+<div id="app"></div>
+<script>
+const state={
+"Revenue Services":"Find qualified current remote buyers and convert demand into paid service orders.",
+"Deal Intelligence":"Find verified high-value commission/finder opportunities with a legal remote path.",
+"Music":"Find buyers, licensing, commissions and distribution opportunities.",
+"Luxury Crafts":"Find verified galleries, collectors and luxury buyers.",
+"YouTube":"Build a compliant monetizable content pipeline.",
+"Instagram":"Build a separate growth and sales pipeline.",
+"Product & Web":"Keep the practical service storefront and execution layer improving.",
+"Automation & Recovery":"Detect blockers and use legitimate fallback routes."
+};
+document.getElementById("app").innerHTML=Object.entries(state).map(([k,v])=>'<div class="card"><span class="badge">ACTIVE</span><h2>'+k+'</h2><p>'+v+'</p></div>').join("");
+</script>
+</body>
+</html>
