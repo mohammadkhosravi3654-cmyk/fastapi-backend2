@@ -1,0 +1,31 @@
+name: Mohammad Twin Heartbeat
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Record heartbeat
+        shell: bash
+        run: |
+          mkdir -p mohammad-twin
+          printf '%s\n' "{\"heartbeat_utc\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"status\":\"alive\"}" > mohammad-twin/heartbeat-status.json
+
+      - name: Commit heartbeat state
+        shell: bash
+        run: |
+          git config user.name "Mohammad Twin"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mohammad-twin/heartbeat-status.json
+          git diff --cached --quiet || git commit -m "Heartbeat: Mohammad Twin"
+          git push
