@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "currency": "USD",
+  "services": [
+    {
+      "id": "micro-copy",
+      "name": "Product Listing Rewrite",
+      "price": 5,
+      "delivery": "15 minutes",
+      "inputs": [
+        "product details"
+      ],
+      "output": "ready-to-publish listing"
+    },
+    {
+      "id": "social-pack",
+      "name": "10 Social Captions",
+      "price": 7,
+      "delivery": "30 minutes",
+      "inputs": [
+        "brand/topic"
+      ],
+      "output": "10 platform-ready captions"
+    },
+    {
+      "id": "cv-fix",
+      "name": "CV / Resume Optimization",
+      "price": 10,
+      "delivery": "30 minutes",
+      "inputs": [
+        "existing CV",
+        "target role"
+      ],
+      "output": "ATS-friendly CV + change notes"
+    },
+    {
+      "id": "landing-copy",
+      "name": "Landing Page Copy",
+      "price": 15,
+      "delivery": "60 minutes",
+      "inputs": [
+        "offer",
+        "audience"
+      ],
+      "output": "headline, benefits, CTA, FAQ"
+    },
+    {
+      "id": "research-brief",
+      "name": "Competitor Research Brief",
+      "price": 20,
+      "delivery": "2 hours",
+      "inputs": [
+        "company",
+        "market"
+      ],
+      "output": "structured research brief with sources"
+    },
+    {
+      "id": "custom-ai",
+      "name": "Custom AI-Assisted Task",
+      "price": 25,
+      "delivery": "quoted",
+      "inputs": [
+        "task brief"
+      ],
+      "output": "human-reviewed deliverable"
+    }
+  ],
+  "rules": {
+    "no_fraud": true,
+    "no_fake_reviews": true,
+    "no_impersonation": true,
+    "no_unauthorized_financial_access": true,
+    "no_platform_policy_evasion": true
+  }
+}
