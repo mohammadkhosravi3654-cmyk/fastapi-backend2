@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "principles": [
+    "claim_is_not_evidence",
+    "retry_after_failure",
+    "verify_before_done",
+    "keep_projects_separate"
+  ],
+  "tasks": [
+    {
+      "id": "twin-channel-001",
+      "project": "mohammad-twin",
+      "title": "Build verified bidirectional Twin-to-model message channel",
+      "status": "in_progress",
+      "definition_of_done": [
+        "durable inbox",
+        "model processing",
+        "durable outbox",
+        "delivery evidence",
+        "round_trip verification",
+        "retry and error records"
+      ],
+      "evidence": [
+        "GitHub issue #3",
+        "Twin command comment 6065842139"
+      ],
+      "next_action": "Implement and execute an end-to-end round-trip test"
+    },
+    {
+      "id": "spouse-001",
+      "project": "matchmaking",
+      "title": "Find a compatible adult spouse for Mohammad",
+      "status": "planning",
+      "definition_of_done": [
+        "clear compatibility criteria",
+        "lawful discovery channels",
+        "consent-aware communication",
+        "candidate screening",
+        "evidence-based progress"
+      ],
+      "guardrails": [
+        "adults_only",
+        "no impersonation",
+        "no private-data scraping",
+        "no harassment",
+        "transparent identity"
+      ],
+      "next_action": "Define compatibility profile and legitimate discovery workflow"
+    }
+  ]
+}
